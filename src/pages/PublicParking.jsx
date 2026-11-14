@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
+import ContactToggle from "../components/ContactToggle";
 import MapFilters from "../components/parking/MapFilters";
 import ParkingMap from "../components/parking/ParkingMap";
 import { parkingService } from "../services/parkingService";
@@ -117,6 +118,7 @@ export default function PublicParking() {
           {loading && slots.length > 0 && <p className="refreshing-note">Memperbarui data...</p>}
         </section>
       </main>
+      <ContactToggle />
     </div>
   );
 }

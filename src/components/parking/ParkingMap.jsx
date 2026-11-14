@@ -186,6 +186,7 @@ export default function ParkingMap({
       )}
 
       <SlotDetailPanel
+        key={selectedSlot?.id ?? "no-selection"}
         onChangeStatus={onChangeStatus}
         onClose={onClose}
         referenceCode={SLOT_POSITION_BY_CODE.get(selectedSlot?.id)?.referenceCode}
